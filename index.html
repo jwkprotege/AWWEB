@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Wirajaya - Professional Security Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templatemo-604-christmas-piano.css">
+    <link rel="icon" type="image/png" href="images/aslogo.png">
+    <link rel="apple-touch-icon" href="images/aslogo.png">
+<!--
+TemplateMo 604 Christmas Piano (design kept)
+-->
+    <style>
+        .logo{ display:flex; align-items:center; text-decoration:none; color:inherit; }
+        .site-logo{
+            max-width:140px;
+            max-height:60px;
+            width:auto;
+            height:auto;
+            display:inline-block;
+            vertical-align:middle;
+            object-fit:contain;
+        }
+        .site-title{
+            margin-left:12px;
+            font-family:'Outfit', sans-serif;
+            font-size:1.05rem;
+            font-weight:600;
+            line-height:1;
+            color:inherit;
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .header-logo-row{ display:flex; align-items:center; justify-content:center; padding:6px 12px; }
+        @media (max-width:768px){
+            .site-logo{ max-width:110px; max-height:48px; }
+            .site-title{ font-size:0.95rem; margin-left:8px; }
+            .header-logo-row{ padding:4px 8px; }
+        }
+        /* Hero background + overlay */
+        #hero{
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("images/bgas.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            height: 100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding: 60px 20px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        .hero-content{ max-width:1100px; text-align:center; }
+        .hero-badge{ display:inline-block; background: rgba(255,255,255,0.08); padding:6px 10px; border-radius:20px; font-weight:600; color: #fff; margin-bottom:12px; }
+        .hero-subtitle{ font-size:1.05rem; color: rgba(255,255,255,0.95); }
+        @media (max-width:768px){
+            #hero{ min-height:100vh; height:auto; padding:40px 14px; background-position: center top; }
+            .hero-subtitle{ font-size:0.98rem; }
+        }
+        .footer-logo{ display:flex; align-items:center; }
+        .footer-logo-img{ max-width:28px; height:auto; margin-right:8px; display:inline-block; }
+        .footer-title{ font-weight:600; }
+        /* Contact extras panel */
+        .contact-extra{
+            background: rgba(255,255,255,0.03);
+            border-radius:8px;
+            padding:18px;
+            color: #fff;
+            max-width:520px;
+        }
+        .contact-extra h3{ margin-top:0; }
+        .contact-card{ display:flex; align-items:flex-start; gap:12px; margin-bottom:12px; }
+        .contact-card .icon{ font-size:1.6rem; line-height:1; width:36px; text-align:center; }
+        .contact-card .body{ flex:1; }
+        .contact-btn{ display:inline-block; margin-top:8px; background:#fff; color:#111; padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:600; }
+        .contact-extra img{ width:100%; height:auto; border-radius:8px; display:block; }
+        /* Products grid - force 3 columns (3,3) with responsive fallbacks */
+        .songs-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 18px;
+            align-items: start;
+        }
+        .song-card{ display:flex; align-items:center; gap:12px; padding:14px; background: rgba(255,255,255,0.02); border-radius:8px; text-decoration:none; color:inherit; height:100%; }
+        .song-card-icon{ font-size:1.6rem; width:44px; text-align:center; }
+        .song-card-info{ flex:1; }
+        @media (max-width:900px){
+            .songs-grid{ grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width:480px){
+            .songs-grid{ grid-template-columns: 1fr; }
+            .song-card{ padding:12px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes (design retained) -->
+    <div class="snowflakes" id="snowflakes"></div>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo Row -->
+        <div class="header-logo-row">
+            <a href="#hero" class="logo">
+                <img src="images/aslogo.png" alt="Arena Wirajaya Logo" class="site-logo">
+                <span class="site-title">Arena Wirajaya</span>
+            </a>
+        </div>
+        <!-- Navigation Row -->
+        <div class="header-nav-row">
+            <div class="nav-container">
+                <div class="nav-decor">
+                    <span class="ornament">🔔</span>
+                    <span>•</span>
+                    <span class="ornament">🎯</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-decor">
+                    <span class="ornament">🎯</span>
+                    <span>•</span>
+                    <span class="ornament">🔔</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Licensed Security Services • Since 2009</span>
+            <h1>Arena Wirajaya Sdn Bhd</h1>
+            <p class="hero-subtitle">Total security solutions — Static Guards, Armed Guards, Investigations, Guard Dogs, Mobile Patrols and more. Nationwide coverage with experienced, vetted personnel.</p>
+            <p style="margin-top:10px;font-size:0.95rem;">Company No: <strong>875741-P</strong> • Paid-up Capital: <strong>RM 1,100,000</strong></p>
+        </div>
+
+        <!-- Mini player removed per request -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <span class="section-badge">About</span>
+            <h2>About Arena Wirajaya</h2>
+            <p class="section-desc">Professional security services with nationwide presence since 2009</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-media">
+                <img src="images/about-piano.jpg" alt="Arena Wirajaya Team">
+                <a href="#" class="youtube-btn" style="pointer-events:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                    Company Profile
+                </a>
+            </div>
+            <div class="about-content">
+                <h3>Who we are</h3>
+                <p>ARENA WIRAJAYA SDN BHD was formed in 2009 and is a leading security agency providing total security solutions with branches nationwide. Our clientele ranges from industrial, manufacturing, telecommunication sectors to offices and government bodies.</p>
+                <p>All security personnel undergo stringent recruitment and vetting by the Royal Malaysian Police, followed by intensive in-house training and continuous professional development.</p>
+                <p class="about-credits">Registered Company No: <strong>875741-P</strong> • Ministry of Home Affairs Licence: <strong>KDN.700-3/2/72 02250005</strong> • Ministry of Finance Reg No: <strong>357-02168561</strong></p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">2009</div>
+                        <div class="stat-label">Established</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">RM1.1M</div>
+                        <div class="stat-label">Paid-up Capital</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Nationwide</div>
+                        <div class="stat-label">Branches</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (was Features) -->
+    <section id="services">
+        <div class="section-header">
+            <span class="section-badge">Services</span>
+            <h2>Security Services & Systems</h2>
+            <p class="section-desc">Comprehensive solutions tailored to client needs</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- shield + person -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M32 6L14 14v12c0 14 10 24 18 28 8-4 18-14 18-28V14L32 6z"/>
+                        <circle cx="32" cy="26" r="6"/>
+                        <path d="M24 42c3-4 9-4 12 0"/>
+                    </svg>
+                </div>
+                <h3>Static Guarding</h3>
+                <p>Trained security officers for static posts — factories, offices, residential complexes and government premises. Officers are vetted and provided with continuous training.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- shield with star (armed/special units) -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M32 6L12 14v12c0 12 8 20 20 24 12-4 20-12 20-24V14L32 6z"/>
+                        <path d="M32 22l3.5 8h8l-6.5 5 2.5 8L32 36l-9.5 7 2.5-8L18.5 30h8L32 22z"/>
+                    </svg>
+                </div>
+                <h3>Armed Guard & Special Units</h3>
+                <p>Licensed armed guard services and specialist response teams for high-risk assignments and government contracts (where applicable and licensed).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- magnifying glass -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="27" cy="27" r="10"/>
+                        <path d="M36 36l14 14" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Investigations & Vetting</h3>
+                <p>Background checks, due diligence, asset tracing, counterfeit investigations and other investigative services across Malaysia and through associates in the region.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- paw print -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="22" cy="20" r="4"/>
+                        <circle cx="42" cy="20" r="4"/>
+                        <circle cx="30" cy="12" r="4"/>
+                        <path d="M32 30c6 6 12 6 14 4 2-2 0-8-6-12-6-4-20-4-22 2-2 6 4 8 14 18z"/>
+                    </svg>
+                </div>
+                <h3>Guard Dog Unit</h3>
+                <p>Trained dog handlers and canines to enhance patrol services and perimeter security for large sites.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- CCTV camera -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="6" y="22" width="36" height="18" rx="3"/>
+                        <circle cx="48" cy="31" r="6"/>
+                        <path d="M42 26l12-6v20" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Security Systems & Fire Safety</h3>
+                <p>Design, installation and maintenance of CCTV, intruder alarms, access control, monitoring systems and integrated fire safety solutions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- people / training -->
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="22" cy="22" r="6"/>
+                        <circle cx="42" cy="22" r="5"/>
+                        <path d="M10 46c4-6 18-6 22 0"/>
+                        <path d="M36 46c2-4 10-4 12 0"/>
+                    </svg>
+                </div>
+                <h3>Training & HR Management</h3>
+                <p>Comprehensive recruitment, in-house training modules, supervisory staff and career progression to maintain high service quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products / Systems Section (was Songs) -->
+    <section id="products">
+        <div class="section-header">
+            <span class="section-badge">Systems</span>
+            <h2>Security Systems & Products</h2>
+            <p class="section-desc">Integrated products we supply and maintain</p>
+        </div>
+        <div class="songs-grid">
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">📷</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">CCTV Systems</div>
+                    <div class="song-card-meta">Design • Installation • Monitoring</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">🔔</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">Intruder Alarm Systems</div>
+                    <div class="song-card-meta">Integration & Central Monitoring</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">🔑</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">Access Control</div>
+                    <div class="song-card-meta">Swipe • Biometric • Visitor Management</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">🧯</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">Fire Safety Solutions</div>
+                    <div class="song-card-meta">Suppression • Prevention • Contingency Plans</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">🔐</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">Guard Patrol & Clocking Systems</div>
+                    <div class="song-card-meta">Patrol Verification • Reporting</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+            <a class="song-card" href="#" target="_blank" rel="noopener">
+                <div class="song-card-icon">🧾</div>
+                <div class="song-card-info">
+                    <div class="song-card-title">Security Marking Products</div>
+                    <div class="song-card-meta">SelectaMark, Logomark, Supermark, Permanetch</div>
+                </div>
+                <div class="song-card-duration">↗</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery / Company Photos Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <span class="section-badge">Photos</span>
+            <h2>Company Photos & Activities</h2>
+            <p class="section-desc">Training, installations, operations — snapshots from our work</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-index="0">
+                <img src="images/christmas-pic-01.jpg" alt="Arena Wirajaya - Training">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="1">
+                <img src="images/christmas-pic-02.jpg" alt="Installation - CCTV">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="2">
+                <img src="images/christmas-pic-03.jpg" alt="Guard Patrol">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="3">
+                <img src="images/christmas-pic-04.jpg" alt="Dog Unit">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="4">
+                <img src="images/christmas-pic-05.jpg" alt="Security Supervisor">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="5">
+                <img src="images/christmas-pic-06.jpg" alt="Client Site Patrol">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="6">
+                <img src="images/christmas-pic-07.jpg" alt="Office & Operations">
+                <div class="gallery-icon">+</div>
+            </div>
+            <div class="gallery-item" data-index="7">
+                <img src="images/christmas-pic-08.jpg" alt="Equipment & Vehicles">
+                <div class="gallery-icon">+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section (new) -->
+    <section id="clients">
+        <div class="section-header">
+            <span class="section-badge">Clients</span>
+            <h2>Selected Client List</h2>
+            <p class="section-desc">Representative clients across government and private sectors</p>
+        </div>
+        <div style="max-width:1100px;margin:0 auto;padding:24px;">
+            <div style="column-count:2;column-gap:40px;font-size:0.95rem;line-height:1.6;">
+                <ul>
+                    <li>Perodua Sale Sdn Bhd</li>
+                    <li>Parkson Corporation Sdn Bhd</li>
+                    <li>MHD Offshore Group Sdn Bhd</li>
+                    <li>Continental Horizon Sdn Bhd</li>
+                    <li>Saujana Prima Development Sdn Bhd</li>
+                    <li>Setia Alam Sales Office</li>
+                    <li>Megah Murni Technology & Construction Sdn Bhd</li>
+                    <li>Wan Hup Construction / Building Clients</li>
+                    <li>Various State Education Departments (security contracts)</li>
+                    <li>Hospital & Healthcare premises (selected contracts)</li>
+                </ul>
+                <ul>
+                    <li>JMB Pangsapuri Akasia</li>
+                    <li>Bandar Setia Alam Sdn Bhd</li>
+                    <li>Perbadanan Pengurusan Rampai Court</li>
+                    <li>MC Kip (Malaysia-China Industrial Park)</li>
+                    <li>GIATMARA Indera Mahkota</li>
+                    <li>KB Steel Marketing Sdn Bhd</li>
+                    <li>Heng Guan Hardware Trading Sdn Bhd</li>
+                    <li>Many more corporate and government partners (full list available on request)</li>
+                </ul>
+            </div>
+            <p style="margin-top:18px;font-size:0.9rem;color:rgba(255,255,255,0.75);">For full client references and contract values (government tenders), please contact our office.</p>
+        </div>
+    </section>
+
+    <!-- Lightbox (kept) -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">◀</button>
+            <img src="" alt="Gallery Image" id="lightboxImg">
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">▶</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-badge">Contact</span>
+            <h2>Get in Touch</h2>
+            <p class="section-desc">Office & enquiries — Arena Wirajaya Sdn Bhd</p>
+        </div>
+        <div class="contact-container">
+            <!-- Contact Info Column -->
+            <div class="contact-info">
+                <h3>Quick Contact</h3>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div class="contact-item-content">
+                        <h4>Location</h4>
+                        <p><a href="https://www.google.com/maps/search/NO.32B+JALAN+2%2F16+BANDAR+BARU+SELAYANG+68100" target="_blank" rel="noopener">NO.32B Jalan 2/16, Bandar Baru Selayang,<br>68100 Batu Caves, Selangor Darul Ehsan</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-content">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@arenawirajaya.com">info@arenawirajaya.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div class="contact-item-content">
+                        <h4>Phone</h4>
+                        <p><a href="tel:0361208087">03-6120 8087</a> • Fax: 03-6120 7087</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">🕐</div>
+                    <div class="contact-item-content">
+                        <h4>Operations</h4>
+                        <p>24/7 Security Operations • Office Hours: Mon–Fri 9:00am–5:00pm</p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps?q=NO.32B+JALAN+2%2F16+BANDAR+BARU+SELAYANG+68100&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <!-- Replacement contact column: profile, procurement, careers, emergency -->
+            <div class="contact-extra">
+                <a href="images/olaw.png" target="_blank" rel="noopener">
+                    <img src="images/olaw.png" alt="Office & Operations">
+                </a>
+                <p style="margin-top:8px;color:rgba(255,255,255,0.85);font-size:0.95rem;">Office & Operations — click image to open full size.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/aslogo.png" alt="Arena Wirajaya" class="footer-logo-img">
+                <span class="footer-title">Arena Wirajaya</span>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#products">Products</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="year">2025</span> Arena Wirajaya Sdn Bhd. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+    // small helper to update copyright year (kept inline so no external edit needed)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // minimal JS mapping for service-tab titles (so UI still feels interactive)
+    document.querySelectorAll('.song-tab').forEach(function(el){
+        el.addEventListener('click', function(){
+            document.querySelectorAll('.song-tab').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            const map = [
+                'Static Guards & Mobile Patrols',
+                'Armed Guard & Special Units',
+                'Investigations & Vetting',
+                'Dog Unit & Handlers',
+                'CCTV, Alarm & Fire Systems'
+            ];
+            const i = parseInt(el.getAttribute('data-service')) || 0;
+            document.getElementById('currentSongTitle').textContent = map[i] || 'Service Overview';
+        });
+    });
+</script>
+
+</script>
+</body>
+</html>
